@@ -9,7 +9,7 @@ from ui_desk import Ui_desknotify,_fromUtf8 as UTF8
 import pynotify
 
 def loadICON():
-	p = os.path.join(os.path.dirname(__file__),"01.gif")
+	p = os.path.join(os.path.dirname(os.path.realpath(__file__)),"01.gif")
 	return QIcon(UTF8(p))
 
 class Alert(QMainWindow,Ui_desknotify):
@@ -19,7 +19,7 @@ class Alert(QMainWindow,Ui_desknotify):
 		#--systray--
 		self._set_systray()
 		#--set timer--
-		QTimer.singleShot(5000,self._timeout)
+		QTimer.singleShot(50000,self._timeout)
 	def _timeout(self):
 		#alert something.
 		self._dosomething()
