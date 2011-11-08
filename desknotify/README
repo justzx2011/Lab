@@ -1,0 +1,5 @@
+a desktop systemtray application.
+
+show some alert message!
+
+based on pyqt,pynotify
